@@ -50,12 +50,12 @@ For a **comprehensive technical guide** on how Fully Homomorphic Encryption is i
 - Relayer callback architecture
 - Privacy guarantees and trade-offs
 
-👉 **Read the full guide:** [FHEVM_INTEGRATION.md](https://github.com/Farukest/Zolymarket/blob/main/FHEVM_INTEGRATION.md)
+👉 **Read the full guide:** [FHEVM_INTEGRATION.md](docs/FHEVM_INTEGRATION.md)
 
 ### 📖 User Guides
 
-- **[User Guide](USER_GUIDE.md)**: Complete guide for placing bets, claiming winnings, and using the platform
-- **[Admin Guide](ADMIN_GUIDE.md)**: Comprehensive guide for administrators managing markets and categories
+- **[User Guide](docs/USER_GUIDE.md)**: Complete guide for placing bets, claiming winnings, and using the platform
+- **[Admin Guide](docs/ADMIN_GUIDE.md)**: Comprehensive guide for administrators managing markets and categories
 
 ---
 
@@ -339,7 +339,7 @@ On resolution: Relayer decrypts for payout calculation
 Final payout: Publicly visible (needed for claiming)
 ```
 
-**Learn more:** See [FHEVM_INTEGRATION.md](https://github.com/Farukest/Zolymarket/blob/main/FHEVM_INTEGRATION.md) for technical details
+**Learn more:** See [FHEVM_INTEGRATION.md](docs/FHEVM_INTEGRATION.md) for technical details
 
 ---
 
@@ -466,7 +466,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **GitHub Repository**: [github.com/Farukest/Zolymarket](https://github.com/Farukest/Zolymarket)
 - **Twitter**: [@0xflydev](https://twitter.com/0xflydev)
 - **Zama FHEVM Docs**: [docs.zama.ai/fhevm](https://docs.zama.ai/fhevm)
-- **FHEVM Integration Guide**: [FHEVM_INTEGRATION.md](https://github.com/Farukest/Zolymarket/blob/main/FHEVM_INTEGRATION.md)
+- **FHEVM Integration Guide**: [FHEVM_INTEGRATION.md](docs/FHEVM_INTEGRATION.md)
 
 ---
 

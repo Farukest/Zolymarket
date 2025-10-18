@@ -52,7 +52,6 @@ const fhevmConfig = {
 
   // Security Configuration
   security: {
-    privateKey: process.env.PRIVATE_KEY,
     requireSignatures: true,
     allowedOrigins: [
       process.env.FRONTEND_URL,
@@ -82,8 +81,7 @@ function validateConfig() {
   const required = [
     'SEPOLIA_RPC_URL',
     'BET_MARKET_ADDRESS',
-    'MONGODB_URI',
-    'PRIVATE_KEY'
+    'MONGODB_URI'
   ];
 
   const missing = required.filter(key => !process.env[key]);

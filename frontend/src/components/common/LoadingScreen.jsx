@@ -1,7 +1,7 @@
 import React from 'react';
 import './LoadingScreen.css';
 
-const LoadingScreen = ({ message = "Loading Polymarket FHEVM..." }) => {
+const LoadingScreen = ({ message = "Loading Zolymarket FHEVM..." }) => {
   return (
     <div className="loading-screen">
       <div className="loading-content">

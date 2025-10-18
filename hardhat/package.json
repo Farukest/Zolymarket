@@ -1,7 +1,7 @@
 {
-  "name": "polymarket-fhevm-contracts",
+  "name": "zolymarket-fhevm-contracts",
   "version": "1.0.0",
-  "description": "Smart contracts for Polymarket FHEVM betting platform",
+  "description": "Smart contracts for Zolymarket FHEVM betting platform",
   "main": "index.js",
   "scripts": {
     "compile": "hardhat compile",
@@ -56,7 +56,7 @@
     "betting",
     "fhevm",
     "zama",
-    "polymarket"
+    "zolymarket"
   ],
   "author": "Your Name",
   "license": "MIT"

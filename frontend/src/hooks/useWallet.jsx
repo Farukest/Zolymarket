@@ -467,7 +467,7 @@ export const WalletProvider = ({ children }) => {
 
   // Show loading screen during initialization or wallet connection
   if (isInitializing) {
-    return <LoadingScreen message="Initializing Polymarket FHEVM..." />;
+    return <LoadingScreen message="Initializing Zolymarket FHEVM..." />;
   }
 
   if (isConnecting) {

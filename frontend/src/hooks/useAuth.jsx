@@ -137,7 +137,7 @@ export const AuthProvider = ({ children }) => {
       }
 
       // Request signature for authentication
-      const message = `Sign this message to authenticate with Polymarket FHEVM.\n\nAddress: ${account}\nTimestamp: ${Date.now()}`;
+      const message = `Sign this message to authenticate with Zolymarket FHEVM.\n\nAddress: ${account}\nTimestamp: ${Date.now()}`;
       
       // Sign message with wallet
       const signature = await window.ethereum.request({

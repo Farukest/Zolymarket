@@ -176,4 +176,5 @@ deployments/hardhat/
 # Test files
 test-results/
 playwright-report/
-playwright/.cache/
+playwright/.cache/# Migration scripts (one-time use)
+backend/src/scripts/migrateDatabaseName.js

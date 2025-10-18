@@ -1,9 +1,9 @@
-// Local Storage Service for Polymarket FHEVM
+// Local Storage Service for Zolymarket FHEVM
 // Handles caching and offline data storage
 
 class StorageService {
   constructor() {
-    this.prefix = 'polymarket_fhevm_';
+    this.prefix = 'zolymarket_fhevm_';
     this.version = '1.0.0';
     this.initializeStorage();
   }

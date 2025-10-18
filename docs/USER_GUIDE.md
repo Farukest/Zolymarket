@@ -1,6 +1,6 @@
-# Polymarket FHEVM - User Guide
+# Zolymarket FHEVM - User Guide
 
-Complete guide for using the Polymarket FHEVM prediction market platform as an end user.
+Complete guide for using the Zolymarket FHEVM prediction market platform as an end user.
 
 ---
 
@@ -800,7 +800,7 @@ A: No. All bets are final once the transaction is confirmed on-chain.
 
 ## Summary
 
-The Polymarket FHEVM platform provides a **private, decentralized prediction market** using advanced encryption technology.
+The Zolymarket FHEVM platform provides a **private, decentralized prediction market** using advanced encryption technology.
 
 **Key Features:**
 - ✅ **Private Betting:** Bet amounts encrypted with FHEVM

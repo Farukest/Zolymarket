@@ -14,7 +14,7 @@ const ADMIN_WALLET = 'benim_adresim';
 // Connect to MongoDB
 async function connectDB() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/polymarket', {
+    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/zolymarket', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
@@ -468,10 +468,10 @@ async function clearAllBets() {
     console.log('==========================================');
 
     const betDeleteResult = await Bet.deleteMany({});
-    console.log(`✅ Deleted ${betDeleteResult.deletedCount} bets from polymarket database`);
+    console.log(`✅ Deleted ${betDeleteResult.deletedCount} bets from zolymarket database`);
 
     const categoryDeleteResult = await Category.deleteMany({});
-    console.log(`✅ Deleted ${categoryDeleteResult.deletedCount} categories from polymarket database`);
+    console.log(`✅ Deleted ${categoryDeleteResult.deletedCount} categories from zolymarket database`);
 
     await mongoose.connection.close();
     console.log('✅ Clear completed');

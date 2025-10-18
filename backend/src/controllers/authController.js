@@ -106,7 +106,7 @@ exports.verify = async (req, res) => {
 // Generate nonce for wallet signature
 exports.getNonce = async (req, res) => {
   const nonce = Math.floor(Math.random() * 1000000);
-  const message = `Sign this message to authenticate with Polymarket FHEVM.\n\nNonce: ${nonce}\nTimestamp: ${Date.now()}`;
+  const message = `Sign this message to authenticate with Zolymarket FHEVM.\n\nNonce: ${nonce}\nTimestamp: ${Date.now()}`;
 
   res.status(200).json({
     success: true,

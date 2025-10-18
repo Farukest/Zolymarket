@@ -1,5 +1,5 @@
 # 🎯 Admin Panel User Guide
-**Polymarket FHEVM - Encrypted Prediction Market Platform**
+**Zolymarket FHEVM - Encrypted Prediction Market Platform**
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -903,7 +903,7 @@ System Settings control platform-wide configuration and parameters.
 │  Platform Configuration                     │
 │  ┌────────────────────────────────────┐     │
 │  │ Platform Name                      │     │
-│  │ [Polymarket FHEVM]                 │     │
+│  │ [Zolymarket FHEVM]                 │     │
 │  └────────────────────────────────────┘     │
 │                                             │
 │  ┌────────────────────────────────────┐     │
@@ -929,7 +929,7 @@ System Settings control platform-wide configuration and parameters.
 
 | Setting | Type | Default | Description |
 |---------|------|---------|-------------|
-| **Platform Name** | String | "Polymarket FHEVM" | Displayed in header/footer |
+| **Platform Name** | String | "Zolymarket FHEVM" | Displayed in header/footer |
 | **Platform Fee** | Number (%) | 2.5 | Fee taken from total pool |
 | **Min Bet** | Number (USDC) | 1 | Global minimum bet |
 | **Max Bet** | Number (USDC) | 10000 | Global maximum bet |
@@ -963,7 +963,7 @@ System Settings control platform-wide configuration and parameters.
 
 **Backend** `.env`:
 ```bash
-MONGODB_URI=mongodb://localhost:27017/polymarket-fhevm
+MONGODB_URI=mongodb://localhost:27017/zolymarket
 ```
 
 **Collections**:

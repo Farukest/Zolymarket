@@ -65,9 +65,9 @@ class EmailService {
 
     try {
       const mailOptions = {
-        from: `"${process.env.APP_NAME || 'Polymarket FHEVM'}" <${process.env.EMAIL_FROM || 'noreply@polymarket-fhevm.com'}>`,
+        from: `"${process.env.APP_NAME || 'Zolymarket FHEVM'}" <${process.env.EMAIL_FROM || 'noreply@zolymarket.com'}>`,
         to: userEmail,
-        subject: 'Welcome to Polymarket FHEVM! 🎉',
+        subject: 'Welcome to Zolymarket FHEVM! 🎉',
         html: this.getWelcomeEmailTemplate(userName),
       };
 
@@ -94,7 +94,7 @@ class EmailService {
         : `Bet resolved: ${betTitle}`;
 
       const mailOptions = {
-        from: `"${process.env.APP_NAME || 'Polymarket FHEVM'}" <${process.env.EMAIL_FROM || 'noreply@polymarket-fhevm.com'}>`,
+        from: `"${process.env.APP_NAME || 'Zolymarket FHEVM'}" <${process.env.EMAIL_FROM || 'noreply@zolymarket.com'}>`,
         to: userEmail,
         subject,
         html: this.getBetResolutionEmailTemplate(betTitle, isWinner, winnings),
@@ -129,7 +129,7 @@ class EmailService {
       const priorityPrefix = priority === 'high' ? '[URGENT] ' : '';
 
       const mailOptions = {
-        from: `"${process.env.APP_NAME || 'Polymarket FHEVM'}" <${process.env.EMAIL_FROM || 'noreply@polymarket-fhevm.com'}>`,
+        from: `"${process.env.APP_NAME || 'Zolymarket FHEVM'}" <${process.env.EMAIL_FROM || 'noreply@zolymarket.com'}>`,
         to: adminEmails,
         subject: `${priorityPrefix}${subject}`,
         html: this.getAdminNotificationTemplate(subject, content, priority),
@@ -174,7 +174,7 @@ class EmailService {
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to Polymarket FHEVM</title>
+        <title>Welcome to Zolymarket FHEVM</title>
         <style>
           body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
           .container { max-width: 600px; margin: 0 auto; padding: 20px; }
@@ -187,7 +187,7 @@ class EmailService {
       <body>
         <div class="container">
           <div class="header">
-            <h1>🎉 Welcome to Polymarket FHEVM!</h1>
+            <h1>🎉 Welcome to Zolymarket FHEVM!</h1>
             <p>The future of private prediction markets</p>
           </div>
           
@@ -271,7 +271,7 @@ class EmailService {
           </div>
           
           <div class="footer">
-            <p>Polymarket FHEVM - Private Prediction Markets</p>
+            <p>Zolymarket FHEVM - Private Prediction Markets</p>
           </div>
         </div>
       </body>
@@ -308,7 +308,7 @@ class EmailService {
           </div>
           
           <div class="footer">
-            <p>Polymarket FHEVM Admin System</p>
+            <p>Zolymarket FHEVM Admin System</p>
             <p>Time: ${new Date().toISOString()}</p>
           </div>
         </div>
@@ -334,12 +334,12 @@ class EmailService {
 
     try {
       const mailOptions = {
-        from: `"${process.env.APP_NAME || 'Polymarket FHEVM'}" <${process.env.EMAIL_FROM || 'noreply@polymarket-fhevm.com'}>`,
+        from: `"${process.env.APP_NAME || 'Zolymarket FHEVM'}" <${process.env.EMAIL_FROM || 'noreply@zolymarket.com'}>`,
         to: testEmail,
-        subject: 'Test Email - Polymarket FHEVM',
+        subject: 'Test Email - Zolymarket FHEVM',
         html: `
           <h2>Email Test Successful! ✅</h2>
-          <p>This is a test email from Polymarket FHEVM.</p>
+          <p>This is a test email from Zolymarket FHEVM.</p>
           <p>Time: ${new Date().toISOString()}</p>
         `,
       };

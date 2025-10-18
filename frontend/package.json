@@ -1,5 +1,5 @@
 {
-  "name": "polymarket-fhevm-frontend",
+  "name": "zolymarket-fhevm-frontend",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -63,7 +63,7 @@
     "ethereum",
     "betting",
     "fhevm",
-    "polymarket"
+    "zolymarket"
   ],
   "author": "Your Name",
   "license": "MIT"

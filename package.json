@@ -1,5 +1,5 @@
 {
-  "name": "polymarket-fhevm",
+  "name": "zolymarket-fhevm",
   "version": "1.0.0",
   "description": "Private prediction market platform powered by FHEVM",
   "private": true,
@@ -46,16 +46,17 @@
     "fhevm",
     "zama",
     "privacy",
-    "defi"
+    "defi",
+    "zolymarket"
   ],
   "author": "Your Name",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/polymarket-fhevm.git"
+    "url": "https://github.com/Farukest/Zolymarket.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/polymarket-fhevm/issues"
+    "url": "https://github.com/Farukest/Zolymarket/issues"
   },
-  "homepage": "https://github.com/your-username/polymarket-fhevm#readme"
+  "homepage": "https://github.com/Farukest/Zolymarket#readme"
 }

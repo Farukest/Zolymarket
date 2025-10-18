@@ -89,7 +89,7 @@ const BetCard = ({ bet, isBookmarked, onBookmark }) => {
     return 'Option';
   };
 
-  // Render different bet types - Polymarket style
+  // Render different bet types - Zolymarket style
   const renderBetContent = () => {
     // If no options, show placeholder
     if (!bet.options || bet.options.length === 0) {
@@ -145,7 +145,7 @@ const BetCard = ({ bet, isBookmarked, onBookmark }) => {
       );
     }
 
-    // BINARY (betType = 0) - Simple Yes/No - Polymarket style large buttons
+    // BINARY (betType = 0) - Simple Yes/No - Zolymarket style large buttons
     if (betType === 0 && bet.options.length === 2) {
       const yesOption = bet.options[0];
       const noOption = bet.options[1];
@@ -268,7 +268,7 @@ const BetCard = ({ bet, isBookmarked, onBookmark }) => {
         )}
       </button>
 
-      {/* Main content layout - Polymarket style */}
+      {/* Main content layout - Zolymarket style */}
       <div className="flex gap-3 flex-1">
         {/* Left: Icon placeholder (38x38) */}
         <div className="flex-shrink-0">

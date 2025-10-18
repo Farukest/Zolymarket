@@ -37,7 +37,7 @@ class UploadService {
         originalName = 'image',
         mimetype = 'image/jpeg',
         userId = null,
-        folder = 'polymarket-fhevm',
+        folder = 'zolymarket',
       } = options;
 
       // Generate unique filename
@@ -69,7 +69,7 @@ class UploadService {
         },
 
         // Tags for organization
-        tags: ['polymarket', 'user-upload', process.env.NODE_ENV || 'development'],
+        tags: ['zolymarket', 'user-upload', process.env.NODE_ENV || 'development'],
       };
 
       // Perform upload
@@ -206,7 +206,7 @@ class UploadService {
 
     try {
       const {
-        folder = 'polymarket-fhevm',
+        folder = 'zolymarket',
         maxResults = 50,
         nextCursor = null,
       } = options;
@@ -290,7 +290,7 @@ class UploadService {
       const timestamp = Math.floor(cutoffDate.getTime() / 1000);
 
       const result = await cloudinary.api.delete_resources_by_tag(
-        'polymarket',
+        'zolymarket',
         {
           created_at: { $lt: timestamp },
         },

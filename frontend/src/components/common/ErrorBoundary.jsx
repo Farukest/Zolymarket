@@ -143,13 +143,13 @@ class ErrorBoundary extends React.Component {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
                   <a
-                    href="mailto:support@polymarket-fhevm.com"
+                    href="mailto:support@zolymarket.com"
                     className="text-blue-600 hover:text-blue-700 transition-colors"
                   >
-                    support@polymarket-fhevm.com
+                    support@zolymarket.com
                   </a>
                   <a
-                    href="https://discord.gg/polymarket-fhevm"
+                    href="https://discord.gg/zolymarket"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700 transition-colors"
@@ -157,7 +157,7 @@ class ErrorBoundary extends React.Component {
                     Discord Support
                   </a>
                   <a
-                    href="https://github.com/polymarket-fhevm/issues"
+                    href="https://github.com/Farukest/Zolymarket/issues"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-1"

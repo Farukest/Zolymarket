@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 async function checkDatabase() {
   try {
-    await mongoose.connect('mongodb://localhost:27017/polymarket');
+    await mongoose.connect('mongodb://localhost:27017/zolymarket');
     console.log('Connected to MongoDB');
 
     const Bet = mongoose.model('Bet', new mongoose.Schema({}, { strict: false, collection: 'bets' }));

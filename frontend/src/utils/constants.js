@@ -42,7 +42,7 @@ export const API_ENDPOINTS = {
 
 // Local storage keys
 export const STORAGE_KEYS = {
-  AUTH_TOKEN: 'polymarket_auth_token',
+  AUTH_TOKEN: 'zolymarket_auth_token',
   BOOKMARKED_BETS: 'bookmarked_bets',
   USER_PREFERENCES: 'user_preferences',
   WALLET_ADDRESS: 'wallet_address'

@@ -49,7 +49,7 @@ const logger = winston.createLogger({
   level: process.env.LOG_LEVEL || 'info',
   format: fileFormat,
   defaultMeta: {
-    service: 'polymarket-fhevm-backend',
+    service: 'zolymarket-fhevm-backend',
     environment: process.env.NODE_ENV || 'development',
   },
   transports: [

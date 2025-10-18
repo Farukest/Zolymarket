@@ -1,0 +1,352 @@
+/* ZAMA.ai inspired color variables */
+:root {
+  /* Primary colors from ZAMA.ai theme */
+  --primary-1: 29, 29, 29;
+  --primary-2: 36, 34, 30;
+  --primary-3: 47, 44, 34;
+  --primary-4: 52, 48, 32;
+  --primary-5: 60, 53, 32;
+  --primary-6: 65, 57, 29;
+  --primary-7: 77, 67, 32;
+  --primary-8: 90, 77, 35;
+  --primary-9: 255, 210, 8;
+  --primary-10: 182, 138, 0;
+  --primary-11: 208, 192, 139;
+  --primary-12: 255, 255, 242;
+
+  /* Tint colors */
+  --tint-1: 29, 29, 29;
+  --tint-2: 35, 34, 34;
+  --tint-3: 44, 44, 43;
+  --tint-4: 48, 48, 46;
+  --tint-5: 54, 53, 51;
+  --tint-6: 58, 57, 55;
+  --tint-7: 68, 68, 64;
+  --tint-8: 79, 78, 74;
+  --tint-9: 136, 133, 121;
+  --tint-10: 148, 144, 132;
+  --tint-11: 194, 192, 187;
+  --tint-12: 255, 255, 254;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  overflow: hidden;
+
+  /* ZAMA.ai gradient background */
+  background: linear-gradient(to bottom left in oklab, rgb(var(--primary-4)), rgb(var(--tint-1)) 60%);
+  background-attachment: fixed;
+
+  /* Fallback for browsers that don't support oklab */
+  background: linear-gradient(to bottom left, rgb(var(--primary-4)), rgb(var(--tint-1)) 60%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.loading-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Animated Dice Icon */
+.loading-icon {
+  perspective: 1000px;
+  margin-bottom: 1rem;
+}
+
+.dice-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.dice {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 4s linear infinite;
+}
+
+.dice-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgb(var(--primary-9));
+  border: 2px solid rgba(var(--primary-11), 0.3);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  box-shadow: 0 0 20px rgba(var(--primary-9), 0.3);
+}
+
+.dice-face-1 { transform: rotateY(0deg) translateZ(40px); }
+.dice-face-2 { transform: rotateY(90deg) translateZ(40px); }
+.dice-face-3 { transform: rotateY(180deg) translateZ(40px); }
+.dice-face-4 { transform: rotateY(-90deg) translateZ(40px); }
+.dice-face-5 { transform: rotateX(90deg) translateZ(40px); }
+.dice-face-6 { transform: rotateX(-90deg) translateZ(40px); }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: rgb(var(--tint-1));
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(var(--tint-1), 0.5);
+}
+
+/* Dice face layouts */
+.dice-face-1 .dot { margin: auto; }
+
+.dice-face-2 {
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px;
+}
+.dice-face-2 .dot:last-child {
+  align-self: flex-end;
+}
+
+.dice-face-3 {
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+.dice-face-3 .dot:nth-child(2) {
+  align-self: center;
+}
+.dice-face-3 .dot:last-child {
+  align-self: flex-end;
+}
+
+.dice-face-4 {
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px;
+}
+.dice-face-4 .dot:nth-child(3),
+.dice-face-4 .dot:nth-child(4) {
+  align-self: flex-end;
+}
+
+.dice-face-5 {
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px;
+}
+.dice-face-5 .dot:nth-child(5) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dice-face-6 {
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px;
+  flex-direction: column;
+}
+.dice-face-6 .dot {
+  width: 6px;
+  height: 6px;
+}
+
+/* Brand Styling */
+.loading-brand {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.brand-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.poly-text {
+  color: rgb(var(--primary-9));
+  text-shadow: 0 0 20px rgba(var(--primary-9), 0.5);
+}
+
+.market-text {
+  color: rgb(var(--primary-9));
+  text-shadow: 0 0 10px rgba(var(--primary-9), 0.3);
+}
+
+.brand-subtitle {
+  font-size: 0.875rem;
+  color: rgb(var(--primary-9));
+  margin-top: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  text-wrap: balance;
+}
+
+/* Loading Progress */
+.loading-progress {
+  width: 100%;
+  max-width: 300px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(var(--tint-7), 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg,
+    rgb(var(--primary-9)),
+    rgb(var(--primary-11)),
+    rgb(var(--primary-9))
+  );
+  background-size: 200% 100%;
+  border-radius: 2px;
+  animation: progressFlow 2s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(var(--primary-9), 0.5);
+}
+
+.loading-message {
+  text-align: center;
+  color: rgb(var(--primary-9));
+  font-size: 0.875rem;
+  font-weight: 600;
+  opacity: 0.9;
+  animation: pulse 2s ease-in-out infinite;
+  text-wrap: balance;
+}
+
+/* Floating Particles */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgb(var(--primary-9));
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: particleFloat 8s ease-in-out infinite;
+}
+
+.particle-1 { left: 10%; animation-delay: 0s; animation-duration: 8s; }
+.particle-2 { left: 20%; animation-delay: 1s; animation-duration: 9s; }
+.particle-3 { left: 80%; animation-delay: 2s; animation-duration: 7s; }
+.particle-4 { left: 90%; animation-delay: 3s; animation-duration: 10s; }
+.particle-5 { left: 50%; animation-delay: 4s; animation-duration: 8s; }
+.particle-6 { left: 70%; animation-delay: 5s; animation-duration: 9s; }
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  25% { transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg); }
+  50% { transform: rotateX(90deg) rotateY(90deg) rotateZ(0deg); }
+  75% { transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotateY(0deg); }
+  50% { transform: translateY(-10px) rotateY(180deg); }
+}
+
+@keyframes progressFlow {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    transform: translateY(-20px) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .loading-content {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .dice-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dice,
+  .dice-face {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dice-face-1 { transform: rotateY(0deg) translateZ(30px); }
+  .dice-face-2 { transform: rotateY(90deg) translateZ(30px); }
+  .dice-face-3 { transform: rotateY(180deg) translateZ(30px); }
+  .dice-face-4 { transform: rotateY(-90deg) translateZ(30px); }
+  .dice-face-5 { transform: rotateX(90deg) translateZ(30px); }
+  .dice-face-6 { transform: rotateX(-90deg) translateZ(30px); }
+
+  .brand-text {
+    font-size: 2rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.75rem;
+  }
+}

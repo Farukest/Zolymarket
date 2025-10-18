@@ -1,0 +1,179 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Environment variables (IMPORTANT: Never commit these files!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Environment files in subdirectories
+backend/.env
+frontend/.env
+hardhat/.env
+
+# Parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Hardhat files
+hardhat/cache
+hardhat/artifacts
+hardhat/deployments
+hardhat/typechain-types
+hardhat/types
+hardhat/fhevmTemp
+hardhat/.openzeppelin
+.openzeppelin/
+fhevmTemp
+
+# Solidity coverage
+coverage.json
+
+# Backend specific
+backend/dist/
+backend/build/
+backend/logs/
+
+# Uploads directory (user-uploaded files)
+uploads/
+
+# Frontend specific
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+
+# Private server setup documentation
+SERVER_SETUP.md
+
+# Temporary files
+*.tmp
+*.temp
+nul
+
+# Backup and old files
+*.bak
+*.backup
+*.old
+*_PART*
+*_REFACTORED*
+*_OLD*
+*.dbg.json
+
+# Contract artifacts
+artifacts/
+cache/
+typechain/
+typechain-types/
+
+# Deployment files
+deployments/localhost/
+deployments/hardhat/
+
+# Test files
+test-results/
+playwright-report/
+playwright/.cache/

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Polymarket FHEVM - Private Prediction Markets</title>
+    <meta name="title" content="Polymarket FHEVM - Private Prediction Markets">
+    <meta name="description" content="Trade on the world's first private prediction markets powered by Fully Homomorphic Encryption. Bet on politics, sports, crypto, and more while keeping your positions private.">
+    <meta name="keywords" content="prediction markets, betting, FHEVM, privacy, blockchain, cryptocurrency, politics, sports">
+    <meta name="author" content="Polymarket FHEVM Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://polymarket-fhevm.com/">
+    <meta property="og:title" content="Polymarket FHEVM - Private Prediction Markets">
+    <meta property="og:description" content="Trade on the world's first private prediction markets powered by Fully Homomorphic Encryption.">
+    <meta property="og:image" content="/og-image.png">
+    <meta property="og:site_name" content="Polymarket FHEVM">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://polymarket-fhevm.com/">
+    <meta property="twitter:title" content="Polymarket FHEVM - Private Prediction Markets">
+    <meta property="twitter:description" content="Trade on the world's first private prediction markets powered by Fully Homomorphic Encryption.">
+    <meta property="twitter:image" content="/twitter-image.png">
+    <meta property="twitter:creator" content="@polymarket_fhevm">
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#1a365d">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Polymarket FHEVM">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://devnet.zama.ai">
+    
+    <!-- Font Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Critical CSS to prevent FOUC */
+      html {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: linear-gradient(to bottom left, rgb(52, 48, 32), rgb(29, 29, 29) 60%);
+        background-attachment: fixed;
+        color: rgb(255, 255, 254);
+        font-weight: 400;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+
+      /* Prevent flash of unstyled content */
+      .no-js #root {
+        display: none;
+      }
+
+      .no-js .noscript-message {
+        display: block;
+        text-align: center;
+        padding: 50px 20px;
+        background: white;
+        margin: 50px auto;
+        max-width: 600px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Polymarket FHEVM",
+      "description": "Private prediction markets powered by Fully Homomorphic Encryption",
+      "url": "https://polymarket-fhevm.com",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and Web3 wallet",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Polymarket FHEVM Team"
+      }
+    }
+    </script>
+  </head>
+  
+  <body class="no-js">
+    <!-- No JavaScript fallback -->
+    <noscript>
+      <div class="noscript-message">
+        <h1>JavaScript Required</h1>
+        <p>Polymarket FHEVM requires JavaScript to function properly. Please enable JavaScript in your browser and refresh the page.</p>
+        <p>If you're using a privacy-focused browser, you may need to allow JavaScript for this site.</p>
+      </div>
+    </noscript>
+
+
+    <!-- Main application root -->
+    <div id="root"></div>
+
+    <!-- Remove no-js class and show content when JS loads -->
+    <script>
+      document.body.classList.remove('no-js');
+      
+      // Error handling for module loading
+      window.addEventListener('error', function(e) {
+        if (e.filename && e.filename.includes('/assets/')) {
+          console.error('Failed to load application assets:', e);
+        }
+      });
+    </script>
+
+    <!-- Ethers.js v5 from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+    <!-- Zama FHEVM SDK from CDN - Latest 0.2.0 version -->
+    <script src="https://cdn.zama.ai/relayer-sdk-js/0.2.0/relayer-sdk-js.umd.cjs" type="text/javascript"></script>
+
+    <!-- Main application script -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Analytics (if enabled) -->
+    <script type="module">
+      if (import.meta.env.VITE_ANALYTICS_ID && import.meta.env.PROD) {
+        // Google Analytics 4
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.googletagmanager.com/gtag/js?id=' + import.meta.env.VITE_ANALYTICS_ID,'gtag');
+
+        window.gtag = function() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', import.meta.env.VITE_ANALYTICS_ID, {
+          page_title: document.title,
+          page_location: window.location.href
+        });
+      }
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script type="module">
+      if ('serviceWorker' in navigator && import.meta.env.PROD) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registered: ', registration);
+            })
+            .catch(function(registrationError) {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

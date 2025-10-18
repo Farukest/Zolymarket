@@ -1,0 +1,61 @@
+{
+  "name": "polymarket-fhevm",
+  "version": "1.0.0",
+  "description": "Private prediction market platform powered by FHEVM",
+  "private": true,
+  "workspaces": [
+    "hardhat",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:hardhat && npm run install:backend && npm run install:frontend",
+    "install:hardhat": "cd hardhat && npm install",
+    "install:backend": "cd backend && npm install", 
+    "install:frontend": "cd frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:contracts && npm run build:backend && npm run build:frontend",
+    "build:contracts": "cd hardhat && npm run compile",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "npm run test:contracts && npm run test:backend",
+    "test:contracts": "cd hardhat && npm test",
+    "test:backend": "cd backend && npm test",
+    "deploy:local": "cd hardhat && npm run deploy:local",
+    "deploy:sepolia": "cd hardhat && npm run deploy:sepolia",
+    "clean": "npm run clean:contracts && npm run clean:backend && npm run clean:frontend",
+    "clean:contracts": "cd hardhat && npm run clean",
+    "clean:backend": "cd backend && rm -rf node_modules dist",
+    "clean:frontend": "cd frontend && rm -rf node_modules dist",
+    "setup": "chmod +x scripts/setup.sh && ./scripts/setup.sh",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "cross-env": "^7.0.3"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "betting",
+    "prediction-market",
+    "fhevm",
+    "zama",
+    "privacy",
+    "defi"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/polymarket-fhevm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/polymarket-fhevm/issues"
+  },
+  "homepage": "https://github.com/your-username/polymarket-fhevm#readme"
+}

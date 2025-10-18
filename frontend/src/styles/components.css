@@ -1,0 +1,484 @@
+/* Polymarket FHEVM Components Styles */
+
+/* Bet Card Component */
+.bet-card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden transition-all duration-200;
+}
+
+.bet-card:hover {
+  @apply shadow-md border-blue-300 transform -translate-y-1;
+}
+
+.bet-card-image {
+  @apply w-full h-48 object-cover;
+}
+
+.bet-card-content {
+  @apply p-6;
+}
+
+.bet-card-title {
+  @apply text-lg font-semibold text-gray-900 mb-2 line-clamp-2;
+}
+
+.bet-card-description {
+  @apply text-gray-600 text-sm mb-4 line-clamp-3;
+}
+
+.bet-card-options {
+  @apply space-y-2 mb-4;
+}
+
+.bet-card-option {
+  @apply flex justify-between items-center p-2 bg-gray-50 rounded;
+}
+
+.bet-card-option-name {
+  @apply font-medium text-gray-900;
+}
+
+.bet-card-option-price {
+  @apply text-sm text-blue-600 font-semibold;
+}
+
+.bet-card-footer {
+  @apply flex justify-between items-center pt-4 border-t border-gray-100;
+}
+
+.bet-card-stats {
+  @apply text-sm text-gray-500;
+}
+
+.bet-card-status {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.bet-card-status.active {
+  @apply bg-green-100 text-green-800;
+}
+
+.bet-card-status.ended {
+  @apply bg-red-100 text-red-800;
+}
+
+.bet-card-status.resolved {
+  @apply bg-blue-100 text-blue-800;
+}
+
+/* Wallet Connect Component */
+.wallet-connect-button {
+  @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors;
+}
+
+.wallet-connect-dropdown {
+  @apply absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50;
+}
+
+.wallet-connect-dropdown-item {
+  @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer;
+}
+
+.wallet-address {
+  @apply font-mono text-sm;
+}
+
+/* Header Component */
+.header {
+  @apply bg-white shadow-sm border-b border-gray-200;
+}
+
+.header-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.header-content {
+  @apply flex justify-between items-center py-4;
+}
+
+.header-logo {
+  @apply flex items-center space-x-3;
+}
+
+.header-logo-text {
+  @apply text-2xl font-bold text-gray-900;
+}
+
+.header-nav {
+  @apply hidden md:flex space-x-8;
+}
+
+.header-nav-link {
+  @apply text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors;
+}
+
+.header-nav-link.active {
+  @apply text-blue-600 bg-blue-50;
+}
+
+.header-actions {
+  @apply flex items-center space-x-4;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  @apply inline-block animate-spin rounded-full border-4 border-solid border-current border-r-transparent motion-reduce:animate-[spin_1.5s_linear_infinite];
+}
+
+.loading-spinner-sm {
+  @apply w-4 h-4;
+}
+
+.loading-spinner-md {
+  @apply w-8 h-8;
+}
+
+.loading-spinner-lg {
+  @apply w-12 h-12;
+}
+
+/* Button Variants */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 border text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200;
+}
+
+.btn-primary {
+  @apply border-transparent text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.btn-secondary {
+  @apply border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-blue-500;
+}
+
+.btn-success {
+  @apply border-transparent text-white bg-green-600 hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-danger {
+  @apply border-transparent text-white bg-red-600 hover:bg-red-700 focus:ring-red-500;
+}
+
+.btn-warning {
+  @apply border-transparent text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-xs;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-base;
+}
+
+.btn-disabled {
+  @apply opacity-50 cursor-not-allowed pointer-events-none;
+}
+
+/* Card Component */
+.card {
+  @apply bg-white overflow-hidden shadow rounded-lg;
+}
+
+.card-header {
+  @apply px-4 py-5 sm:px-6 border-b border-gray-200;
+}
+
+.card-title {
+  @apply text-lg leading-6 font-medium text-gray-900;
+}
+
+.card-subtitle {
+  @apply mt-1 max-w-2xl text-sm text-gray-500;
+}
+
+.card-body {
+  @apply px-4 py-5 sm:p-6;
+}
+
+.card-footer {
+  @apply px-4 py-4 sm:px-6 border-t border-gray-200 bg-gray-50;
+}
+
+/* Modal Component */
+.modal-overlay {
+  @apply fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50;
+}
+
+.modal-container {
+  @apply relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white;
+}
+
+.modal-header {
+  @apply flex items-center justify-between pb-3 border-b border-gray-200;
+}
+
+.modal-title {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.modal-close {
+  @apply text-gray-400 hover:text-gray-600 transition-colors;
+}
+
+.modal-body {
+  @apply py-4;
+}
+
+.modal-footer {
+  @apply flex justify-end space-x-3 pt-3 border-t border-gray-200;
+}
+
+/* Input Component */
+.input {
+  @apply appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm;
+}
+
+.input-error {
+  @apply border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500;
+}
+
+.input-success {
+  @apply border-green-300 focus:ring-green-500 focus:border-green-500;
+}
+
+.input-group {
+  @apply relative;
+}
+
+.input-group-prepend {
+  @apply absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none;
+}
+
+.input-group-append {
+  @apply absolute inset-y-0 right-0 pr-3 flex items-center;
+}
+
+/* Form styles */
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.form-error {
+  @apply mt-1 text-sm text-red-600;
+}
+
+.form-help {
+  @apply mt-1 text-sm text-gray-500;
+}
+
+/* Admin Panel Styles */
+.admin-panel {
+  @apply bg-white rounded-lg shadow;
+}
+
+.admin-stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+}
+
+.admin-stat-card {
+  @apply bg-white p-6 rounded-lg shadow-sm border border-gray-200;
+}
+
+.admin-stat-value {
+  @apply text-3xl font-bold text-gray-900;
+}
+
+.admin-stat-label {
+  @apply text-sm font-medium text-gray-600;
+}
+
+.admin-table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.admin-table-header {
+  @apply bg-gray-50;
+}
+
+.admin-table-header-cell {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.admin-table-body {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.admin-table-row {
+  @apply hover:bg-gray-50;
+}
+
+.admin-table-cell {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+}
+
+/* Bet Options Styles */
+.bet-options-container {
+  @apply space-y-3;
+}
+
+.bet-option {
+  @apply border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:bg-blue-50 transition-all cursor-pointer;
+}
+
+.bet-option.selected {
+  @apply border-blue-500 bg-blue-50 ring-2 ring-blue-200;
+}
+
+.bet-option-header {
+  @apply flex justify-between items-center mb-2;
+}
+
+.bet-option-name {
+  @apply font-medium text-gray-900;
+}
+
+.bet-option-price {
+  @apply text-lg font-bold text-blue-600;
+}
+
+.bet-option-stats {
+  @apply flex justify-between text-sm text-gray-600;
+}
+
+.bet-option-probability {
+  @apply text-green-600 font-medium;
+}
+
+/* Chart Styles */
+.chart-container {
+  @apply w-full h-64 md:h-80;
+}
+
+.chart-loading {
+  @apply flex items-center justify-center h-64 text-gray-500;
+}
+
+.chart-error {
+  @apply flex items-center justify-center h-64 text-red-500;
+}
+
+/* Notification Styles */
+.notification {
+  @apply fixed top-4 right-4 max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 z-50;
+}
+
+.notification-success {
+  @apply border-l-4 border-green-400;
+}
+
+.notification-error {
+  @apply border-l-4 border-red-400;
+}
+
+.notification-warning {
+  @apply border-l-4 border-yellow-400;
+}
+
+.notification-info {
+  @apply border-l-4 border-blue-400;
+}
+
+.notification-content {
+  @apply p-4;
+}
+
+.notification-title {
+  @apply text-sm font-medium text-gray-900;
+}
+
+.notification-message {
+  @apply mt-1 text-sm text-gray-500;
+}
+
+.notification-close {
+  @apply absolute top-2 right-2 text-gray-400 hover:text-gray-600;
+}
+
+/* Responsive utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .dark-mode .bet-card {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .dark-mode .bet-card-title {
+    @apply text-white;
+  }
+  
+  .dark-mode .bet-card-description {
+    @apply text-gray-300;
+  }
+  
+  .dark-mode .header {
+    @apply bg-gray-900 border-gray-700;
+  }
+  
+  .dark-mode .header-logo-text {
+    @apply text-white;
+  }
+  
+  .dark-mode .header-nav-link {
+    @apply text-gray-300 hover:text-white;
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "polymarket-fhevm-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for Polymarket FHEVM betting platform",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "node": "hardhat node",
+    "clean": "hardhat clean",
+    "size": "hardhat size-contracts",
+    "coverage": "hardhat coverage"
+  },
+  "devDependencies": {
+    "@fhevm/hardhat-plugin": "^0.1.0",
+    "@fhevm/mock-utils": "^0.1.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
+    "@nomicfoundation/hardhat-ethers": "^3.0.4",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.9",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.1.1",
+    "@typechain/ethers-v6": "^0.4.3",
+    "@typechain/hardhat": "^8.0.3",
+    "@types/chai": "^4.3.6",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^24.6.0",
+    "@zama-fhe/oracle-solidity": "^0.1.0",
+    "chai": "^4.3.8",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.26.0",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-deploy": "^0.11.34",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.4",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.3.1",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@fhevm/solidity": "^0.8.0",
+    "@openzeppelin/contracts": "^4.9.3",
+    "@openzeppelin/contracts-upgradeable": "^4.9.6",
+    "@openzeppelin/hardhat-upgrades": "^3.9.1",
+    "@zama-fhe/relayer-sdk": "^0.2.0",
+    "dotenv": "^16.3.1",
+    "fhevmjs": "^0.6.2",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.18.2"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "betting",
+    "fhevm",
+    "zama",
+    "polymarket"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

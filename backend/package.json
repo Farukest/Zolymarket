@@ -1,0 +1,50 @@
+{
+  "name": "polymarket-fhevm-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Polymarket FHEVM betting platform",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest --passWithNoTests",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.40.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "ethers": "^6.15.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.8.1",
+    "express-slow-down": "^1.6.0",
+    "express-validator": "^7.2.1",
+    "fhevmjs": "^0.3.2",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "morgan": "^1.10.0",
+    "multer": "2.0.2",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "jest": "^29.6.2",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "ethereum",
+    "betting",
+    "fhevm"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -11,7 +11,7 @@ import LoadingSpinner from '../components/common/LoadingSpinner';
 import { adminAPI, categoryAPI } from '../services/api';
 import { ethers } from 'ethers';
 import { getNetworkConfig } from '../config/contracts';
-import BetMarketCoreABI from '../../../hardhat/artifacts/contracts/BetMarketCore.sol/BetMarketCore.json';
+import BetMarketCoreABI from '@artifacts/BetMarketCore.sol/BetMarketCore.json';
 import { Toaster } from 'react-hot-toast';
 import { getFhevmInstance } from '../lib/fhe.js';
 import { Target, Flame, Users, DollarSign, FolderOpen, TrendingUp, Settings, BarChart3 } from 'lucide-react';

@@ -3,9 +3,9 @@ import { ethers } from 'ethers';
 import detectEthereumProvider from '@metamask/detect-provider';
 import { getContracts, getNetworkConfig, NETWORK_CONFIGS } from '../config/contracts.js';
 import LoadingScreen from '../components/common/LoadingScreen';
-import BetMarketCoreABI from '../../../hardhat/artifacts/contracts/BetMarketCore.sol/BetMarketCore.json';
-import BetMarketPayoutABI from '../../../hardhat/artifacts/contracts/BetMarketPayout.sol/BetMarketPayout.json';
-import BetMarketStatsABI from '../../../hardhat/artifacts/contracts/BetMarketStats.sol/BetMarketStats.json';
+import BetMarketCoreABI from '@artifacts/BetMarketCore.sol/BetMarketCore.json';
+import BetMarketPayoutABI from '@artifacts/BetMarketPayout.sol/BetMarketPayout.json';
+import BetMarketStatsABI from '@artifacts/BetMarketStats.sol/BetMarketStats.json';
 
 const WalletContext = createContext();
 

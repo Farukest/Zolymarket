@@ -3,8 +3,8 @@ import { useWallet } from '../hooks/useWallet';
 import { Trophy, Loader2, CheckCircle, XCircle, Clock } from 'lucide-react';
 import { ethers } from 'ethers';
 import { getNetworkConfig } from '../config/contracts';
-import BetMarketCoreABI from '../../../hardhat/artifacts/contracts/BetMarketCore.sol/BetMarketCore.json';
-import BetMarketPayoutABI from '../../../hardhat/artifacts/contracts/BetMarketPayout.sol/BetMarketPayout.json';
+import BetMarketCoreABI from '@artifacts/BetMarketCore.sol/BetMarketCore.json';
+import BetMarketPayoutABI from '@artifacts/BetMarketPayout.sol/BetMarketPayout.json';
 import toast from 'react-hot-toast';
 
 const Claims = () => {

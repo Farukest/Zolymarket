@@ -401,7 +401,7 @@ export async function decryptUserBalance(contractAddress, userAddress) {
         });
 
         // Get contract
-        const BetMarketABI = (await import('../../../hardhat/artifacts/contracts/BetMarketCore.sol/BetMarketCore.json')).default;
+        const BetMarketABI = (await import("@artifacts/BetMarketCore.sol/BetMarketCore.json")).default;
         const contract = new ethers.Contract(checksumContractAddress, BetMarketABI.abi, signer);
 
         // 1. Get encrypted balance (using getMyEncryptedBalance for proper ACL)

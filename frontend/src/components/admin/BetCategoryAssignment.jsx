@@ -4,7 +4,7 @@ import { useWallet } from '../../hooks/useWallet';
 import categoryAPI from '../../services/categoryAPI';
 import betSyncAPI, { BASE_URL } from '../../services/betSyncAPI';
 import { getNetworkConfig } from '../../config/contracts';
-import BetMarketCoreABI from '../../../../hardhat/artifacts/contracts/BetMarketCore.sol/BetMarketCore.json';
+import BetMarketCoreABI from '@artifacts/BetMarketCore.sol/BetMarketCore.json';
 import toast from 'react-hot-toast';
 import { ethers } from 'ethers';
 

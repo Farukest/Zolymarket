@@ -3,7 +3,7 @@ import { CONTRACTS, NETWORK_CONFIG } from '../config/contracts.js';
 import { encryptBetAmount, encryptBetData, initializeFHE } from '../lib/fhe.js';
 
 // Import contract ABIs - Updated to use BetMarketCore from hardhat artifacts
-import BetMarketCoreContract from '../../../hardhat/artifacts/contracts/BetMarketCore.sol/BetMarketCore.json';
+import BetMarketCoreContract from "@artifacts/BetMarketCore.sol/BetMarketCore.json";
 const BetMarketABI = BetMarketCoreContract.abi;
 import CategoryManagerABI from '../contracts/CategoryManager.sol/CategoryManager.json';
 import AdminManagerABI from '../contracts/AdminManager.sol/AdminManager.json';

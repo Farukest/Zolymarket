@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import { getNetworkConfig } from '../config/contracts';
-import BetMarketCoreABI from '../../../hardhat/artifacts/contracts/BetMarketCore.sol/BetMarketCore.json';
-import BetMarketStatsABI from '../../../hardhat/artifacts/contracts/BetMarketStats.sol/BetMarketStats.json';
+import BetMarketCoreABI from '@artifacts/BetMarketCore.sol/BetMarketCore.json';
+import BetMarketStatsABI from '@artifacts/BetMarketStats.sol/BetMarketStats.json';
 import { getFhevmInstance } from '../lib/fhe.js';
 
 /**

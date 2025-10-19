@@ -17,6 +17,7 @@ export default defineConfig({
       '@services': resolve(__dirname, 'src/services'),
       '@utils': resolve(__dirname, 'src/utils'),
       '@styles': resolve(__dirname, 'src/styles'),
+      '@artifacts': resolve(__dirname, '../hardhat/artifacts/contracts'),
     },
   },
 

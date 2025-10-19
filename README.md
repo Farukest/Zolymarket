@@ -1,4 +1,4 @@
-# 🔐 Zolymarket
+# Zolymarket
 
 **Private Prediction Markets on Zama FHEVM**
 
@@ -8,6 +8,14 @@ A fully decentralized prediction market platform that leverages Fully Homomorphi
 [![Built with FHEVM](https://img.shields.io/badge/Built%20with-Zama%20FHEVM-blue)](https://docs.zama.ai/fhevm)
 [![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react)](https://reactjs.org/)
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.24-363636?logo=solidity)](https://soliditylang.org/)
+
+---
+
+## Built with Zama FHEVM
+
+This is a **production-ready FHEVM implementation** showcasing private prediction markets with encrypted bet amounts, option selections, and oracle-based decryption.
+
+👉 **Technical Deep Dive:** [FHEVM_INTEGRATION.md](docs/FHEVM_INTEGRATION.md) - Complete guide on encryption workflows, smart contract patterns, relayer callbacks, and privacy architecture
 
 ---
 

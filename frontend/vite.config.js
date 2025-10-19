@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -28,7 +29,11 @@ export default defineConfig({
     cors: true,
     fs: {
       // Allow serving files from parent directories (for workspace monorepo)
-      allow: ['.', '..', '../..', process.cwd()]
+      allow: [
+        resolve(__dirname, '..'), // Project root (polymarket-fhevm)
+        resolve(__dirname, '../hardhat'), // Hardhat artifacts
+        __dirname, // Frontend directory
+      ]
     },
     headers: {
       'Cross-Origin-Embedder-Policy': 'require-corp',

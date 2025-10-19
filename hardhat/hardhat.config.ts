@@ -12,7 +12,8 @@ import "solidity-coverage";
 const MNEMONIC: string = vars.get("MNEMONIC", "test test test test test test test test test test test junk");
 const ALCHEMY_API_KEY = vars.get("ALCHEMY_API_KEY", "");
 const INFURA_API_KEY = vars.get("INFURA_API_KEY", "");
-const PRIVATE_KEY = vars.get("PRIVATE_KEY", "");
+// Default dummy key (only for compilation, never for deployment)
+const PRIVATE_KEY = vars.get("PRIVATE_KEY", "0x0000000000000000000000000000000000000000000000000000000000000001");
 const ETHERSCAN_API_KEY = vars.get("ETHERSCAN_API_KEY", "");
 
 const config: HardhatUserConfig = {

@@ -14,9 +14,12 @@ A fully decentralized prediction market platform that leverages Fully Homomorphi
 ## 🌟 Key Features
 
 ### 🔒 Privacy-First Architecture
-- **Encrypted Bet Amounts**: Your bet sizes remain completely private using FHEVM's homomorphic encryption
-- **Hidden Positions**: Other users cannot see your market positions or betting patterns
-- **Transparent Outcomes**: Market results remain publicly verifiable on-chain
+- **Encrypted Bet Amounts**: Individual bet amounts are encrypted using FHEVM (`euint64`) - no one can see how much you bet
+- **Encrypted Option Selection**: Your chosen options are encrypted on-chain using FHEVM (`euint8`) - other users cannot see your positions
+- **Encrypted User Balances**: Total platform balance encrypted using FHEVM homomorphic encryption
+- **Encrypted Pool Totals**: Total amounts staked on each option encrypted during betting period
+- **Oracle-Based Decryption**: After bet ends, admin requests decryption and Zama oracle reveals encrypted totals for payout calculation
+- **Transparent Outcomes**: Final results and statistics become publicly visible after decryption
 
 ### 🎯 Multiple Market Types
 - **Binary Markets**: Simple Yes/No predictions (e.g., "Will Bitcoin reach $100K?")
@@ -34,8 +37,8 @@ A fully decentralized prediction market platform that leverages Fully Homomorphi
 ### 🛡️ Security & Decentralization
 - **Smart Contract Powered**: All logic runs on-chain with zero downtime
 - **Role-Based Access**: Granular admin permissions (Super Admin, Bet Manager, Category Manager)
-- **Relayer Callback**: Secure off-chain decryption for payout calculations
-- **MongoDB Integration**: Efficient winner/loser tracking to prevent unnecessary decryption requests
+- **Relayer Decryption**: Off-chain decryption only when users claim payouts, keeping bets private throughout the betting period
+- **MongoDB for UX**: Stores metadata like bet titles, categories, and user positions for quick filtering and sorting without exposing encrypted amounts
 
 ---
 

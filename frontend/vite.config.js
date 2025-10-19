@@ -25,6 +25,10 @@ export default defineConfig({
     host: '127.0.0.1',
     open: false, // Disable auto-opening browser (for server environments)
     cors: true,
+    fs: {
+      // Allow serving files from parent directories (for workspace monorepo)
+      allow: ['..']
+    },
     headers: {
       'Cross-Origin-Embedder-Policy': 'require-corp',
       'Cross-Origin-Opener-Policy': 'same-origin',

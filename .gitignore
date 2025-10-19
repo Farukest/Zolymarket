@@ -178,3 +178,6 @@ test-results/
 playwright-report/
 playwright/.cache/# Migration scripts (one-time use)
 backend/src/scripts/migrateDatabaseName.js
+
+# External scripts (server management, data migration)
+external_scripts/

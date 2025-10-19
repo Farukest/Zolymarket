@@ -23,7 +23,7 @@ export default defineConfig({
   server: {
     port: 5173,
     host: '127.0.0.1',
-    open: true,
+    open: false, // Disable auto-opening browser (for server environments)
     cors: true,
     headers: {
       'Cross-Origin-Embedder-Policy': 'require-corp',

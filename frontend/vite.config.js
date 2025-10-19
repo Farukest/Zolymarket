@@ -24,9 +24,16 @@ export default defineConfig({
 
   server: {
     port: 5173,
-    host: '127.0.0.1',
+    host: '0.0.0.0', // Allow external connections
     open: false, // Disable auto-opening browser (for server environments)
     cors: true,
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      'xflydev.xyz',
+      'www.xflydev.xyz',
+      '.xflydev.xyz', // Wildcard for subdomains
+    ],
     fs: {
       // Allow serving files from parent directories (for workspace monorepo)
       allow: [

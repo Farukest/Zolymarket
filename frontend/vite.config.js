@@ -27,7 +27,7 @@ export default defineConfig({
     cors: true,
     fs: {
       // Allow serving files from parent directories (for workspace monorepo)
-      allow: ['..']
+      allow: ['.', '..', '../..', process.cwd()]
     },
     headers: {
       'Cross-Origin-Embedder-Policy': 'require-corp',

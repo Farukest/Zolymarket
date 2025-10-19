@@ -100,7 +100,4 @@ const config: HardhatUserConfig = {
   },
 };
 
-// Import custom tasks
-import "./tasks/placeBet.js";
-
 export default config;

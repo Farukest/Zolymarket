@@ -105,16 +105,20 @@ zolymarket/
 
 Before starting, you need to install the following tools:
 
-#### 1. Install Node.js v18+
+#### 1. Install Node.js v20+
+
+**IMPORTANT:** This project requires Node.js 20 or higher (fhevmjs dependency requires node >=20)
+
+**Recommended:** Use Node.js 22.x for best compatibility
 
 **Windows:**
 1. Download Node.js from [nodejs.org](https://nodejs.org/)
-2. Download the **LTS version** (18.x or higher)
+2. Download **Node.js 22.x** (Current release)
 3. Run the installer (`.msi` file)
 4. Follow the installation wizard (keep default settings)
 5. Verify installation:
    ```bash
-   node --version
+   node --version  # Should be v22.x.x (e.g., v22.20.0)
    npm --version
    ```
 
@@ -123,12 +127,12 @@ Before starting, you need to install the following tools:
 # Update package list
 sudo apt update
 
-# Install Node.js 18.x
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+# Install Node.js 22.x (recommended for consistency)
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Verify installation
-node --version
+node --version  # Should be v22.x.x (e.g., v22.20.0)
 npm --version
 ```
 

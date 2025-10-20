@@ -66,7 +66,7 @@ const Header = () => {
             <div className="flex items-center">
               <button
                 onClick={handleLogoClick}
-                className="flex items-center gap-3 text-xl font-semibold text-primary-subtle hover:opacity-80 transition-opacity"
+                className="flex items-center gap-4 text-xl font-semibold text-primary-subtle hover:opacity-80 transition-opacity"
               >
                 <div className="w-8 h-8 relative">
                   <div className="dice-mini">

@@ -122,7 +122,7 @@ const BetCard = ({ bet, isBookmarked, onBookmark }) => {
 
             return (
               <div key={index} className="flex items-center justify-between gap-2">
-                <span className="text-xs font-medium text-gray-700 dark:text-gray-300 flex-1 truncate">
+                <span className="text-sm-custom font-medium text-gray-800 dark:text-gray-200 flex-1 truncate">
                   {optionText || `Option ${index + 1}`}
                 </span>
                 <div className="flex gap-1.5">
@@ -215,7 +215,7 @@ const BetCard = ({ bet, isBookmarked, onBookmark }) => {
                 key={index}
                 className="option-btn w-full flex items-center justify-between px-3 py-2 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-750 rounded-lg transition-colors group"
               >
-                <span className="text-xs font-medium text-gray-900 dark:text-gray-100 truncate flex-1 text-left">
+                <span className="text-sm-custom font-medium text-gray-800 dark:text-gray-200 truncate flex-1 text-left">
                   {optionText || `Option ${index + 1}`}
                 </span>
                 <span className="text-sm font-bold text-blue-600 dark:text-blue-400 ml-2">
@@ -268,35 +268,35 @@ const BetCard = ({ bet, isBookmarked, onBookmark }) => {
         )}
       </button>
 
-      {/* Main content layout - Zolymarket style */}
-      <div className="flex gap-3 flex-1">
-        {/* Left: Icon placeholder (38x38) */}
-        <div className="flex-shrink-0">
-          <div className="w-[38px] h-[38px] bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-            {!imageError && bet.imageUrl ? (
-              <img
-                src={bet.imageUrl?.startsWith('http') ? bet.imageUrl : `${BASE_URL}${bet.imageUrl}`}
-                alt={bet.title}
-                className="w-full h-full object-cover rounded-lg"
-                onError={() => setImageError(true)}
-              />
-            ) : (
-              <TrendingUp className="w-5 h-5 text-white" />
-            )}
+      {/* Main content layout - Icon + Title on top, options below */}
+      <div className="flex-1 flex flex-col">
+        {/* Top: Icon + Title in horizontal row */}
+        <div className="flex items-start gap-2.5 mb-3">
+          {/* Icon (38x38) */}
+          <div className="flex-shrink-0">
+            <div className="w-[38px] h-[38px] bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              {!imageError && bet.imageUrl ? (
+                <img
+                  src={bet.imageUrl?.startsWith('http') ? bet.imageUrl : `${BASE_URL}${bet.imageUrl}`}
+                  alt={bet.title}
+                  className="w-full h-full object-cover rounded-lg"
+                  onError={() => setImageError(true)}
+                />
+              ) : (
+                <TrendingUp className="w-5 h-5 text-white" />
+              )}
+            </div>
           </div>
-        </div>
 
-        {/* Right: Content */}
-        <div className="flex-1 min-w-0 flex flex-col">
           {/* Title */}
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 line-clamp-2 leading-snug mb-3">
+          <h3 className="flex-1 text-sm font-medium text-gray-900 dark:text-gray-100 line-clamp-2 leading-snug tracking-wide">
             {bet.title}
           </h3>
+        </div>
 
-          {/* Bet options - flex-1 to push footer down */}
-          <div className="flex-1">
-            {renderBetContent()}
-          </div>
+        {/* Bottom: Bet options */}
+        <div className="flex-1">
+          {renderBetContent()}
         </div>
       </div>
 

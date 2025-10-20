@@ -1152,6 +1152,12 @@ html.dark .dark\:bg-gray-800 .text-xs,
     font-weight: 500 !important;
 }
 
+/* Custom text size for bet options - between xs and sm */
+.text-sm-custom {
+  font-size: 0.85rem;
+  line-height: 1rem;
+}
+
 .bg-t {
     background-color: rgb(39 39 39 / 80%);
     padding-top: 5px;

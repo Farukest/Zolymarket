@@ -181,3 +181,6 @@ backend/src/scripts/migrateDatabaseName.js
 
 # External scripts (server management, data migration)
 external_scripts/
+
+# Documents folder
+documents/

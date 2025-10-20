@@ -24,6 +24,12 @@ export const useContractBets = (chainId) => {
 
                 // Get contract configuration
                 const networkConfig = getNetworkConfig(chainId);
+                console.log('🌐 useContractBets - Network Config:', {
+                    inputChainId: chainId,
+                    detectedNetwork: networkConfig.name,
+                    coreContract: networkConfig.contracts.BET_MARKET_CORE,
+                    rpcUrl: networkConfig.rpcUrl
+                });
                 const provider = new ethers.JsonRpcProvider(networkConfig.rpcUrl);
 
                 // Initialize Core and Stats contracts

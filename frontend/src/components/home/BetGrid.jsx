@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { useInView } from 'react-intersection-observer';
 import BetCard from './BetCard';
 import { useContractBets } from '../../hooks/useContractBets';
 import { useWallet } from '../../hooks/useWallet';
-import { Loader2, TrendingUp, ChevronLeft, ChevronRight, ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
+import { Loader2, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import betSyncAPI from '../../services/betSyncAPI';
 
-const ITEMS_PER_PAGE = 30;
+const ITEMS_PER_PAGE = 16; // Items per page
 
 const BetGrid = ({ filter = 'all', categoryId = null, searchQuery = '' }) => {
   const [bookmarkedBets, setBookmarkedBets] = useState(new Set());
@@ -14,11 +13,17 @@ const BetGrid = ({ filter = 'all', categoryId = null, searchQuery = '' }) => {
   const [loadingCategoryBets, setLoadingCategoryBets] = useState(false);
   const [dbBets, setDbBets] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortBy, setSortBy] = useState('newest'); // newest, oldest, volume-high, volume-low, ending-soon, ending-later
+  const [sortBy, setSortBy] = useState('newest');
   const { chainId } = useWallet();
 
+  // Debug: Log wallet connection
+  console.log('🔌 BetGrid - Wallet ChainId:', chainId);
+
+  // Default to Sepolia if wallet not connected (11155111 in decimal)
+  const effectiveChainId = chainId || 11155111;
+
   // Fetch ALL bets directly from contract
-  const { bets: contractBets, loading: isLoading, error } = useContractBets(chainId);
+  const { bets: contractBets, loading: isLoading, error } = useContractBets(effectiveChainId);
 
   // Fetch DB bets to get imageUrls and other metadata
   useEffect(() => {
@@ -141,6 +146,20 @@ const BetGrid = ({ filter = 'all', categoryId = null, searchQuery = '' }) => {
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const paginatedBets = filteredBets.slice(startIndex, endIndex);
 
+  // Debug pagination
+  console.log('📊 BetGrid Pagination Debug:', {
+    contractBetsCount: contractBets.length,
+    dbBetsCount: dbBets.length,
+    mergedBetsCount: mergedBets.length,
+    filteredBetsCount: filteredBets.length,
+    totalPages,
+    currentPage,
+    startIndex,
+    endIndex,
+    paginatedBetsCount: paginatedBets.length,
+    itemsPerPage: ITEMS_PER_PAGE
+  });
+
   const handlePageChange = (page) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -228,28 +247,7 @@ const BetGrid = ({ filter = 'all', categoryId = null, searchQuery = '' }) => {
         </div>
       )}
 
-      {/* Bookmarked section */}
-      {!searchQuery && bookmarkedBets.size > 0 && filter !== 'bookmarked' && (
-        <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-blue-600" />
-            Your Bookmarks
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredBets
-              .filter(bet => bookmarkedBets.has(bet.id))
-              .slice(0, 4)
-              .map((bet) => (
-                <BetCard
-                  key={bet.id}
-                  bet={bet}
-                  isBookmarked={true}
-                  onBookmark={handleBookmark}
-                />
-              ))}
-          </div>
-        </div>
-      )}
+      {/* Bookmarked section - Disabled for now */}
 
       {/* All bets grid */}
       <div className="space-y-4">
@@ -294,67 +292,65 @@ const BetGrid = ({ filter = 'all', categoryId = null, searchQuery = '' }) => {
         </div>
       </div>
 
-      {/* Pagination */}
-      {totalPages > 1 && (
-        <div className="flex items-center justify-center gap-2 mt-8">
-          <button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="p-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
+      {/* Pagination - Always show */}
+      <div className="flex items-center justify-center gap-2 mt-6">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="p-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        >
+          <ChevronLeft className="w-4 h-4" />
+        </button>
 
-          <div className="flex items-center gap-1">
-            {[...Array(totalPages)].map((_, i) => {
-              const page = i + 1;
+        <div className="flex items-center gap-1">
+          {[...Array(totalPages)].map((_, i) => {
+            const page = i + 1;
 
-              // Show first page, last page, current page, and pages around current
-              const showPage =
-                page === 1 ||
-                page === totalPages ||
-                (page >= currentPage - 1 && page <= currentPage + 1);
+            // Show first page, last page, current page, and pages around current
+            const showPage =
+              page === 1 ||
+              page === totalPages ||
+              (page >= currentPage - 1 && page <= currentPage + 1);
 
-              // Show ellipsis
-              const showEllipsis =
-                (page === 2 && currentPage > 3) ||
-                (page === totalPages - 1 && currentPage < totalPages - 2);
+            // Show ellipsis
+            const showEllipsis =
+              (page === 2 && currentPage > 3) ||
+              (page === totalPages - 1 && currentPage < totalPages - 2);
 
-              if (!showPage && !showEllipsis) return null;
+            if (!showPage && !showEllipsis) return null;
 
-              if (showEllipsis) {
-                return (
-                  <span key={page} className="px-3 py-2 text-gray-500 dark:text-gray-400">
-                    ...
-                  </span>
-                );
-              }
-
+            if (showEllipsis) {
               return (
-                <button
-                  key={page}
-                  onClick={() => handlePageChange(page)}
-                  className={`px-4 py-2 rounded-lg border transition-colors ${
-                    currentPage === page
-                      ? 'bg-blue-600 border-blue-600 text-white font-medium'
-                      : 'border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
-                  }`}
-                >
-                  {page}
-                </button>
+                <span key={page} className="px-2 py-1.5 text-sm text-gray-400 dark:text-gray-500">
+                  ...
+                </span>
               );
-            })}
-          </div>
+            }
 
-          <button
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className="p-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+            return (
+              <button
+                key={page}
+                onClick={() => handlePageChange(page)}
+                className={`min-w-[36px] px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                  currentPage === page
+                    ? 'bg-blue-600 text-white'
+                    : 'border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                }`}
+              >
+                {page}
+              </button>
+            );
+          })}
         </div>
-      )}
+
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="p-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        >
+          <ChevronRight className="w-4 h-4" />
+        </button>
+      </div>
 
       {/* Page info */}
       {filteredBets.length > 0 && (

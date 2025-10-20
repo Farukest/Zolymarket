@@ -3,6 +3,8 @@ import { Search, Menu, X } from 'lucide-react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import WalletConnect from './WalletConnect';
 import NetworkSelector from './NetworkSelector';
+import FaucetButton from './FaucetButton';
+import FaucetBanner from './FaucetBanner';
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -115,6 +117,7 @@ const Header = () => {
                 Wallet
               </Link>
               <NetworkSelector />
+              <FaucetButton />
               <WalletConnect />
             </div>
 
@@ -183,7 +186,8 @@ const Header = () => {
                   Wallet
                 </Link>
                 <NetworkSelector />
-              <WalletConnect />
+                <FaucetButton />
+                <WalletConnect />
               </div>
 
               {/* Navigation - Mobile */}
@@ -203,6 +207,9 @@ const Header = () => {
           </div>
         )}
       </header>
+
+      {/* Faucet Info Banner */}
+      <FaucetBanner />
     </>
   );
 };

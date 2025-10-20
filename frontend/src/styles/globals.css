@@ -1158,6 +1158,27 @@ html.dark .dark\:bg-gray-800 .text-xs,
   line-height: 1rem;
 }
 
+/* Faucet button shining border animation */
+@keyframes shine-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4),
+                0 0 10px -2px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0),
+                0 0 20px 0px rgba(16, 185, 129, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0),
+                0 0 10px -2px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.faucet-shine {
+  position: relative;
+  animation: shine-border 2s ease-in-out infinite;
+}
+
 .bg-t {
     background-color: rgb(39 39 39 / 80%);
     padding-top: 5px;

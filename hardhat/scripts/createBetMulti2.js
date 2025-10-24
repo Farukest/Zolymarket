@@ -4,7 +4,7 @@ require('dotenv').config();
 async function main() {
     console.log("📊 Creating multiple bets in contract...");
 
-    const contractAddress = "0x9EE86aB426fD483F77741D4dbB63d81DCd259F27"; // BetMarketCore (Fixed requestId=0 bug in claimPayout)
+    const contractAddress = "0xBf1071209bBBa6296a7F55Aa6A7eF7711ee23429"; // BetMarketCore (Fixed requestId=0 bug in claimPayout)
     const usdcAddress = "0x18C97d762dF7Ee8Efa413B99bf2D14943E420Fc2";
 
     // Get signer from PRIVATE_KEY in .env

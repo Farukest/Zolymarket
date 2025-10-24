@@ -3,7 +3,7 @@ const { ethers } = require("hardhat");
 async function main() {
     console.log("📊 Creating multiple bets in contract...");
 
-    const contractAddress = "0x9EE86aB426fD483F77741D4dbB63d81DCd259F27"; // BetMarketCore (Fixed requestId=0 bug in claimPayout)
+    const contractAddress = "0xBf1071209bBBa6296a7F55Aa6A7eF7711ee23429"; // BetMarketCore (Fixed requestId=0 bug in claimPayout)
     const usdcAddress = "0x18C97d762dF7Ee8Efa413B99bf2D14943E420Fc2";
     const [signer] = await ethers.getSigners();
 
@@ -21,14 +21,14 @@ async function main() {
 
     const betMarket = await ethers.getContractAt("BetMarketCore", contractAddress);
 
-    const fiveDays = Math.floor(Date.now() / 1000) + 86400 * 5; // 5 days from now
+    const twentyfiveDays = Math.floor(Date.now() / 1000) + 86400 * 25; // 5 days from now
 
     const bets = [
         {
             type: "NESTED",
             betType: 2,
             optionCount: 3,
-            endTime: fiveDays,
+            endTime: twentyfiveDays,
             title: "When will the Government shutdown end?",
             description: "Prediction market on when the government shutdown will end",
             options: ["October 6-9", "October 10-14", "October 15 or later"],
@@ -40,7 +40,7 @@ async function main() {
             type: "NESTED",
             betType: 2,
             optionCount: 5,
-            endTime: fiveDays,
+            endTime: twentyfiveDays,
             title: "New York City Mayoral Election",
             description: "Who will win the NYC Mayoral Election?",
             options: ["Zohran Mamdani", "Andrew Cuomo", "Eric Adams", "Curtis Sliwa", "Jim Walden"],
@@ -52,7 +52,7 @@ async function main() {
             type: "NESTED",
             betType: 2,
             optionCount: 4,
-            endTime: fiveDays,
+            endTime: twentyfiveDays,
             title: "Fed decision in October?",
             description: "What will be the Federal Reserve's rate decision in October?",
             options: ["50+ bps decrease", "25 bps decrease", "No change", "25+ bps increase"],
@@ -64,7 +64,7 @@ async function main() {
             type: "NESTED",
             betType: 2,
             optionCount: 5,
-            endTime: fiveDays,
+            endTime: twentyfiveDays,
             title: "World Series Champion 2025",
             description: "Which team will win the 2025 World Series?",
             options: ["Los Angeles Dodgers", "Toronto Blue Jays", "Milwaukee Brewers", "Seattle Mariners", "Detroit Tigers"],
@@ -76,7 +76,7 @@ async function main() {
             type: "BINARY",
             betType: 0,
             optionCount: 2,
-            endTime: fiveDays,
+            endTime: twentyfiveDays,
             title: "Blue Jays vs Yankees",
             description: "MLB Game: Blue Jays vs Yankees - Who will win?",
             options: ["Blue Jays", "Yankees"],
@@ -89,7 +89,7 @@ async function main() {
             type: "BINARY",
             betType: 0,
             optionCount: 2,
-            endTime: fiveDays,
+            endTime: twentyfiveDays,
             title: "Mariners vs Tigers",
             description: "MLB Game: Mariners vs Tigers - Who will win?",
             options: ["Mariners", "Tigers"],
@@ -102,7 +102,7 @@ async function main() {
             type: "NESTED",
             betType: 2,
             optionCount: 3,
-            endTime: fiveDays,
+            endTime: twentyfiveDays,
             title: "Will Congress pass a funding bill by...?",
             description: "When will Congress pass the funding bill?",
             options: ["October 15", "October 31", "November 30"],
@@ -114,7 +114,7 @@ async function main() {
             type: "BINARY",
             betType: 0,
             optionCount: 2,
-            endTime: fiveDays,
+            endTime: twentyfiveDays,
             title: "Will Hamas release all Israeli hostages by October 31?",
             description: "Will all Israeli hostages be released by the deadline?",
             options: ["Yes", "No"],
@@ -126,7 +126,7 @@ async function main() {
             type: "NESTED",
             betType: 2,
             optionCount: 5,
-            endTime: fiveDays,
+            endTime: twentyfiveDays,
             title: "What will Trump say during President of Finland events on October 9?",
             description: "Predictions on Trump's talking points during the Finland event",
             options: ["Ukraine / Russia 7+ times", "Tariff 3+ times", "Hamas", "Border", "NATO"],

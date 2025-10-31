@@ -184,3 +184,15 @@ external_scripts/
 
 # Documents folder
 documents/
+
+# Analysis and documentation files (not for version control)
+FHEVM_COMPARISON_ANALYSIS.md
+INCREMENT_WITH_RELAYER.md
+
+# Test pages
+frontend/src/pages/IncrementTest.jsx
+
+# Deployment files
+hardhat/deploy/deploy.ts
+hardhat/deployed-contracts-mock.json
+hardhat/deployed-contracts-test.json

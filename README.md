@@ -269,11 +269,26 @@ You need **Sepolia ETH** and **Test USDC** to use the platform.
 - Use public faucets like [sepoliafaucet.com](https://sepoliafaucet.com/)
 - Or contact me on Twitter: [@0xflydev](https://twitter.com/0xflydev)
 
-**Test USDC:**
-- Contact [@0xflydev](https://twitter.com/0xflydev) with your wallet address
-- I'll send you test USDC tokens
+**Test USDC (Faucet):**
 
-**Note:** The platform is currently in beta. For deployment and advanced setup, reach out on Twitter or open an issue on GitHub
+The platform includes a built in faucet feature for obtaining test USDC tokens. Once connected to the platform, you can claim 1000 USDC every 24 hours directly through the interface.
+
+<div align="center">
+
+![Faucet Feature](/uploads/faucet-here.png)
+
+*Click the faucet 💧 button to claim test USDC tokens*
+
+</div>
+
+**How to use the faucet:**
+1. Connect your MetaMask wallet to the platform ( Choose Sepolia )
+2. Locate the faucet button (💧) in the header area
+3. Click the button to claim 1000 test USDC
+4. Wait 24 hours before claiming again
+5. Use your USDC to place encrypted bets on prediction markets
+
+**Platform Status:** Currently in beta. For deployment and advanced setup, reach out on Twitter or open an issue on GitHub
 
 ---
 

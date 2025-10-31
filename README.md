@@ -275,7 +275,7 @@ The platform includes a built in faucet feature for obtaining test USDC tokens. 
 
 <div align="center">
 
-![Faucet Feature](/uploads/faucet-here.png)
+![Faucet Feature](<img width="889" height="266" alt="image" src="https://github.com/user-attachments/assets/bf9978b5-ecf7-47b1-8213-a123f8e50769" />)
 
 *Click the faucet 💧 button to claim test USDC tokens*
 
